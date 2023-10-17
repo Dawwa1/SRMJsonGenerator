@@ -51,8 +51,9 @@
             listBox1.ItemHeight = 12;
             listBox1.Location = new Point(100, 1);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(175, 160);
+            listBox1.Size = new Size(187, 160);
             listBox1.TabIndex = 1;
+            listBox1.MouseDown += listBox1_MouseDown;
             // 
             // button1
             // 
@@ -72,12 +73,16 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(277, 161);
+            ClientSize = new Size(284, 161);
             Controls.Add(button1);
             Controls.Add(listBox1);
             Controls.Add(generate);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "Form1";
-            Text = "Form1";
+            ShowIcon = false;
+            Text = "SRM JSON Generator (SRMJG)";
+            Load += Form1_Load;
             ResumeLayout(false);
         }
 
